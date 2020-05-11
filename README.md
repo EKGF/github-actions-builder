@@ -9,6 +9,7 @@ We switched from Alpine to Debian for this image due to these two articles:
 Utilities in this image:
 
 - jq (for processing JSON)
+- yq (for processing YAML)
 - curl & wget (for executing HTTP commands)
 - git
 - rsync

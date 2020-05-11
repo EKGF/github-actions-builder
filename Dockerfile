@@ -10,6 +10,7 @@
 FROM python:3.8-slim-buster
 
 ENV AWSCLI_VERSION="1.18.56"
+ENV YQ_VERSION="3.3.0"
 
 ENV PATH="/app/.local/bin:${PATH}"
 
@@ -38,6 +39,9 @@ RUN \
   pip install requests  && \
   pip install boto3  && \
   pip install pystardog  && \
+  curl -L "https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}/yq_linux_amd64" -o /usr/bin/yq && \
+  chmod +x /usr/bin/yq && \
+  yq --version && \
   apt-get autoremove --purge -y git && \
   apt-get clean -y && \
   rm -rf /app/.cache >/dev/null 2>&1 || true && \
