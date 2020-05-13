@@ -18,6 +18,8 @@ Python libraries:
 
 - awscli
 - rdflib
+- sparqlwrapper
 - pystardog
 - requests
 - boto3
+- owlrl

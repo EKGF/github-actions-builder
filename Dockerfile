@@ -51,6 +51,7 @@ RUN apt-get update && \
     python3 -m pip install requests && \
     python3 -m pip install boto3 && \
     python3 -m pip install pystardog && \
+    python3 -m pip install owlrl && \
 #   no more pip installs after this point so we can now remove the .cache directory
     rm -rf /home/ekgprocess/.cache && \
 #
