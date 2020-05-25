@@ -76,7 +76,6 @@ RUN apt-get update && \
       set -x && \
       aws --version \
     ) && \
-    apt-get autoremove --purge -y git && \
     apt-get clean -y && \
     rm -rf /app/.cache >/dev/null 2>&1 || true && \
 #
