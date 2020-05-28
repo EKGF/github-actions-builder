@@ -42,7 +42,7 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends apt-utils 2> >( grep -v 'since apt-utils is not installed' >&2 ) && \
     apt-get install -y -qq less groff ca-certificates wget curl jq git rsync unzip && \
 #   create /home/ekgprocess/.cache and own it as root to avoid red warning messages during docker build
-	  mkdir -p /home/ekgprocess/.cache && chown root /home/ekgprocess/.cache && \
+    mkdir -p /home/ekgprocess/.cache && chown root /home/ekgprocess/.cache && \
     python3 -m pip install --upgrade pip && \
 #   install wheel just to avoid all kinds of messages during docker build
     python3 -m pip install wheel && \
@@ -52,6 +52,11 @@ RUN apt-get update && \
     python3 -m pip install boto3 && \
     python3 -m pip install pystardog && \
     python3 -m pip install owlrl && \
+    python3 -m pip install pandas && \
+    python3 -m pip install stringcase && \
+    python3 -m pip install unidecode && \
+    python3 -m pip install humps && \
+    python3 -m pip install xlrd && \
 #   no more pip installs after this point so we can now remove the .cache directory
     rm -rf /home/ekgprocess/.cache && \
 #
