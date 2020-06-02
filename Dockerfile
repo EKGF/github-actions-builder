@@ -40,7 +40,24 @@ SHELL ["/bin/bash", "-c"]
 USER root
 RUN apt-get update && \
     apt-get install -y --no-install-recommends apt-utils 2> >( grep -v 'since apt-utils is not installed' >&2 ) && \
-    apt-get install -y -qq less groff ca-certificates wget curl jq git rsync unzip && \
+    apt-get install -y -qq \
+    	uuid-dev \
+    	dirmngr \
+    	gnupg \
+    	less \
+    	groff \
+        ca-certificates \
+		netbase \
+        git \
+    	wget \
+    	curl \
+		unzip \
+    	jq \
+    	rsync \
+#       python3-gssapi \
+#       krb5-user \
+#		libkrb5-dev \
+    	&& \
 #   create /home/ekgprocess/.cache and own it as root to avoid red warning messages during docker build
     mkdir -p /home/ekgprocess/.cache && chown root /home/ekgprocess/.cache && \
     python3 -m pip install --upgrade pip && \
@@ -58,7 +75,7 @@ RUN apt-get update && \
     python3 -m pip install humps && \
     python3 -m pip install xlrd && \
     python3 -m pip install ldap3 && \
-    python3 -m pip install gssapi && \
+#   python3 -m pip install gssapi && \
 #   no more pip installs after this point so we can now remove the .cache directory
     rm -rf /home/ekgprocess/.cache && \
 #
@@ -90,7 +107,7 @@ RUN apt-get update && \
 #   and group root (see openshift comments at the top of this dockerfile)
 #
   	cd /home/ekgprocess && \
-	  chown -vR ekgprocess:root .
+    chown -vR ekgprocess:root .
 
 #
 # 	now we leave the image to run as user ekgprocess from its home directory

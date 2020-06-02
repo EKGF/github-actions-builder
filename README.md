@@ -14,6 +14,19 @@ Utilities in this image:
 - git
 - rsync
 - awscli
+- uuid-dev
+- dirmngr
+- gnupg
+- less
+- groff
+- ca-certificates
+- netbase
+- unzip
+- jq
+- rsync
+- krb5-user
+- krb5-config
+- libgssapi-krb5-2 
 
 Python libraries:
 
