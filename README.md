@@ -13,13 +13,22 @@ Utilities in this image:
 - curl & wget (for executing HTTP commands)
 - git
 - rsync
+- awscli
 
 Python libraries:
 
-- awscli
+- wheel
 - rdflib
 - sparqlwrapper
-- pystardog
 - requests
 - boto3
-- owlrl
+- pystardog
+- owlrt
+- pandas
+- stringcase
+- unidecode
+- humps
+- xlrd
+- ldap3
+- gssapi
+
