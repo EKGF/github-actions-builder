@@ -24,24 +24,30 @@ Utilities in this image:
 - unzip
 - jq
 - rsync
-- krb5-user
-- krb5-config
-- libgssapi-krb5-2 
+- krb5-user (not yet)
+- krb5-config (not yet)
+- libgssapi-krb5-2 (not yet)
 
 Python libraries:
 
 - wheel
+- setuptools
 - rdflib
 - sparqlwrapper
-- requests
+- ekglib
 - boto3
-- pystardog
-- owlrt
+- botocore
+- owlrl
 - pandas
+- python-dateutil
+- requests
+- six
 - stringcase
-- unidecode
 - humps
-- xlrd
+- argparse
+- inflection
 - ldap3
-- gssapi
-
+- xlrd
+- pystardog
+- unidecode
+- gssapi (not yet)
