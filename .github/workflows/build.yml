@@ -1,4 +1,4 @@
-name: CI
+name: build-image
 
 on:
   push:
@@ -10,11 +10,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - shell: bash
-        env:
-          DOCKERHUB_USERNAME: $${{ secrets.DOCKERHUB_USERNAME }}
-        run: |
-          echo "DOCKERHUB_USERNAME = xxx${DOCKERHUB_USERNAME}xxx"
       - uses: actions/checkout@v2
       - name: Build and push Docker images
         uses: docker/build-push-action@v1.1.0
