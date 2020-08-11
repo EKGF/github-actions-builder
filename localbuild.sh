@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-_IMAGE_NAME="docker.io/ekgf/debian-awscli"
+_IMAGE_NAME="docker.io/ekgf/github-actions-builder"
 _IMAGE_VERSION="latest"
-_MANUALLY_INCREMENTED_IMAGE_VERSION="0.0.7"
+_MANUALLY_INCREMENTED_IMAGE_VERSION="0.0.1"
 
 docker build . \
   --iidfile=image.id \
