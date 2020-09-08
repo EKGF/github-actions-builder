@@ -1,53 +1,9 @@
-# Base Image - debian-awscli
+# Base Image - github-actions-builder
 
-debian-awscli is a lightweight base image that has bash, python and the AWS CLI on board (for S3 access)
+github-actions-builder is based on [debian-awscli](https://github.com/EKGF/debian-awscli)
+and adds the following components to that:
 
-We switched from Alpine to Debian for this image due to these two articles:
-- https://pythonspeed.com/articles/base-image-python-docker-images/
-- https://pythonspeed.com/articles/alpine-docker-python/
+- Mozilla SOPS
+- Docker (to be used as a client)
 
-Utilities in this image:
-
-- jq (for processing JSON)
-- yq (for processing YAML)
-- curl & wget (for executing HTTP commands)
-- git
-- rsync
-- awscli
-- uuid-dev
-- dirmngr
-- gnupg
-- less
-- groff
-- ca-certificates
-- netbase
-- unzip
-- jq
-- rsync
-- krb5-user (not yet)
-- krb5-config (not yet)
-- libgssapi-krb5-2 (not yet)
-
-Python libraries:
-
-- wheel
-- setuptools
-- rdflib
-- sparqlwrapper
-- ekglib
-- boto3
-- botocore
-- owlrl
-- pandas
-- python-dateutil
-- requests
-- six
-- stringcase
-- humps
-- argparse
-- inflection
-- ldap3
-- xlrd
-- pystardog
-- unidecode
-- gssapi (not yet)
+This image can be used in Github Actions workflows to build the components of an EKG platform.

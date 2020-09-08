@@ -17,5 +17,5 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
           repository: ekgf/github-actions-builder
-          tags: latest, 0.0.1
+          tags: latest, 0.0.2
           always_pull: true
